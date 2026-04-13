@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Crocase - Seja dono de uma franquia | Oportunidade de Negócio</title>
+
+  <meta name="description"
+    content="Seja dono de uma franquia Crocase. A maior rede de assistência e acessórios para smartphones do Brasil. Modelo testado, validado e com alta rentabilidade." />
+  <meta name="keywords"
+    content="franquia, crocase, acessórios celular, assistência técnica, smartphone, investimento, negócio lucrativo, empreendedorismo" />
+  <meta name="author" content="Crocase Franchising" />
+  <meta name="theme-color" content="#8cc63f" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <link rel="canonical" href="https://crocase.com.br" />
+
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Crocase - Franquia de Acessórios e Assistência para Smartphones" />
+  <meta property="og:description"
+    content="Invista na maior rede do segmento no Brasil. Suporte completo, logística de ponta e alta lucratividade." />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1556656793-062ff987b50d?q=80&w=1200&auto=format&fit=crop" />
+  <meta property="og:site_name" content="Crocase Franchising" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Crocase - Seja dono de uma franquia" />
+  <meta name="twitter:description" content="A maior rede de acessórios e assistência do Brasil." />
+  <meta name="twitter:image"
+    content="https://images.unsplash.com/photo-1556656793-062ff987b50d?q=80&w=1200&auto=format&fit=crop" />
+
+  <!-- Schema.org for Franchise -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FranchiseBusiness",
+    "name": "Crocase Franchising",
+    "description": "Maior rede de assistência e acessórios para smartphones do Brasil.",
+    "url": "https://crocase.com.br",
+    "logo": "https://crocase.com.br/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+
+  <!-- DNS Prefetch & Preconnect -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->  <style>
+    /* ======== Lead CAPTURE MODAL STYLES - CROCASE IDENTITY ======== */
+    :root {
+      --lead-bg: #f8fafc;
+      --lead-surface: #ffffff;
+      --lead-accent: #8cc63f;
+      --lead-accent-dark: #7ab32f;
+      --lead-text: #1a202c;
+      --lead-muted: #64748b;
+      --lead-light-green: #f0f9e8;
+    }
+
+    .lead-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .lead-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lead-modal-container {
+      background: linear-gradient(135deg, var(--lead-surface) 0%, var(--lead-bg) 100%);
+      border: 1px solid rgba(140, 198, 63, 0.2);
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12),
+                  0 0 1px rgba(140, 198, 63, 0.1),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      max-width: 520px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: scale(0.92) translateY(30px);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      animation: slideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: scale(0.92) translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .lead-modal-overlay.active .lead-modal-container {
+      transform: scale(1) translateY(0);
+    }
+
+    .lead-modal-header {
+      padding: 48px 40px 32px;
+      background: linear-gradient(135deg, var(--lead-light-green) 0%, rgba(140, 198, 63, 0.05) 100%);
+      border-bottom: 1px solid rgba(140, 198, 63, 0.1);
+      position: relative;
+      border-radius: 28px 28px 0 0;
+    }
+
+    .lead-modal-badge {
+      display: inline-block;
+      background: var(--lead-accent);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .lead-modal-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      background: rgba(140, 198, 63, 0.08);
+      border: 1.5px solid rgba(140, 198, 63, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--lead-muted);
+      font-size: 26px;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .lead-modal-close:hover {
+      background: var(--lead-accent);
+      color: white;
+      border-color: var(--lead-accent);
+      transform: rotate(90deg) scale(1.1);
+    }
+
+    .lead-modal-close:active {
+      transform: rotate(90deg) scale(0.95);
+    }
+
+    .lead-modal-title {
+      color: var(--lead-text);
+      font-size: 32px;
+      font-weight: 800;
+      margin: 0;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .lead-modal-subtitle {
+      color: var(--lead-muted);
+      font-size: 15px;
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .lead-modal-body {
+      padding: 40px;
+    }
+
+    .lead-form-group {
+      margin-bottom: 24px;
+    }
+
+    .lead-form-label {
+      display: block;
+      color: var(--lead-text);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .lead-form-input,
+    .lead-form-select {
+      width: 100%;
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 14px 18px;
+      color: var(--lead-text);
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      box-sizing: border-box;
+    }
+
+    .lead-form-input::placeholder {
+      color: #cbd5e1;
+    }
+
+    .lead-form-input:focus,
+    .lead-form-select:focus {
+      outline: none;
+      border-color: var(--lead-accent);
+      background: #ffffff;
+      box-shadow: 0 0 0 4px rgba(140, 198, 63, 0.12);
+    }
+
+    .lead-form-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='%2364748b' d='M1.5 1.5l5.5 5 5.5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 40px;
+    }
+
+    .lead-form-select option {
+      background: #ffffff;
+      color: var(--lead-text);
+    }
+
+    .lead-form-submit {
+      width: 100%;
+      padding: 16px 24px;
+      background: linear-gradient(135deg, var(--lead-accent) 0%, var(--lead-accent-dark) 100%);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: 0 8px 24px rgba(140, 198, 63, 0.25), 0 2px 6px rgba(0, 0, 0, 0.08);
+      margin-top: 12px;
+    }
+
+    .lead-form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(140, 198, 63, 0.35), 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .lead-form-submit:active {
+      transform: scale(0.98);
+    }
+
+    .lead-form-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .lead-success-message {
+      display: none;
+      padding: 14px 16px;
+      background: linear-gradient(135deg, rgba(140, 198, 63, 0.08) 0%, rgba(140, 198, 63, 0.04) 100%);
+      border: 1.5px solid rgba(140, 198, 63, 0.3);
+      border-radius: 12px;
+      color: #5a9d28;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .lead-success-message.show {
+      display: block;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .lead-hidden-input {
+      display: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .lead-modal-container {
+        border-radius: 20px;
+        max-height: 85vh;
+      }
+
+      .lead-modal-header {
+        padding: 32px 24px 24px;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .lead-modal-title {
+        font-size: 26px;
+      }
+
+      .lead-modal-body {
+        padding: 28px 24px;
+      }
+
+      .lead-form-submit {
+        padding: 14px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+  <!-- Preload JS -->
+  <link rel="modulepreload" href="data:application/octet-stream;base64,CmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7CmltcG9ydCBSZWFjdERPTSBmcm9tICdyZWFjdC1kb20vY2xpZW50JzsKaW1wb3J0IEFwcCBmcm9tICcuL0FwcCc7Cgpjb25zdCByb290RWxlbWVudCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290Jyk7CmlmICghcm9vdEVsZW1lbnQpIHsKICB0aHJvdyBuZXcgRXJyb3IoIkNvdWxkIG5vdCBmaW5kIHJvb3QgZWxlbWVudCB0byBtb3VudCB0byIpOwp9Cgpjb25zdCByb290ID0gUmVhY3RET00uY3JlYXRlUm9vdChyb290RWxlbWVudCk7CnJvb3QucmVuZGVyKAogIDxSZWFjdC5TdHJpY3RNb2RlPgogICAgPEFwcCAvPgogIDwvUmVhY3QuU3RyaWN0TW9kZT4KKTs=">
+
+  <script type="module" crossorigin src="./assets/index-muYD0Ti_.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/vendor-gqrnyqzi.js">
+  <link rel="modulepreload" crossorigin href="./assets/react-ex3asIcl.js">
+  <link rel="modulepreload" crossorigin href="./assets/motion-BFcR7cbo.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-Cre3TmKF.css">
+</head>
+
+<body class="text-slate-100 antialiased overflow-x-hidden">
+
+  <!-- LEAD CAPTURE MODAL -->
+  <div id="leadModal" class="lead-modal-overlay">
+    <div class="lead-modal-container" role="dialog" aria-labelledby="lead-modal-title" aria-modal="true">
+      <div class="lead-modal-header">
+        <span class="lead-modal-badge">🚀 Oportunidade Exclusiva</span>
+        <h2 id="lead-modal-title" class="lead-modal-title">Seja Franqueado Crocase</h2>
+        <p class="lead-modal-subtitle">Desbloqueie seu potencial como empreendedor e cresça com a maior rede do Brasil</p>
+        <button class="lead-modal-close" id="closeLeadModal" aria-label="Fechar modal">✕</button>
+      </div>
+      <div class="lead-modal-body">
+        <div id="successMessage" class="lead-success-message">
+          ✓ Perfeito! Seus dados foram recebidos. Entraremos em contato em breve!
+        </div>
+        <form id="leadForm" class="lead-form">
+          <input type="text" name="website" class="lead-hidden-input" tabindex="-1" autocomplete="off">
+          
+          <div class="lead-form-group">
+            <label for="modalName" class="lead-form-label">Nome Completo</label>
+            <input 
+              required 
+              id="modalName" 
+              name="nome" 
+              type="text" 
+              class="lead-form-input" 
+              placeholder="Seu nome completo"
+              aria-label="Seu nome completo"
+            >
+          </div>
+
+          <div class="lead-form-group">
+            <label for="modalEmail" class="lead-form-label">E-mail Profissional</label>
+            <input 
+              required 
+              id="modalEmail" 
+              name="email" 
+              type="email" 
+              class="lead-form-input" 
+              placeholder="exemplo@empresa.com"
+              aria-label="Seu e-mail profissional"
+            >
+          </div>
+
+          <div class="lead-form-group">
+            <label for="modalPhone" class="lead-form-label">Telefone (WhatsApp)</label>
+            <input 
+              id="modalPhone" 
+              name="telefone" 
+              type="tel" 
+              class="lead-form-input" 
+              placeholder="(11) 99999-9999"
+              aria-label="Seu telefone WhatsApp"
+            >
+          </div>
+
+          <div class="lead-form-group">
+            <label for="modalObjective" class="lead-form-label">Capital Disponível</label>
+            <select
+              id="modalObjective"
+              name="objetivo"
+              class="lead-form-select"
+              aria-label="Capital disponível para investimento"
+            >
+              <option value="">Selecione uma opção</option>
+              <option value="Até R$ 150 mil">Até R$ 150 mil</option>
+              <option value="R$ 150k a R$ 200k">R$ 150k a R$ 200k</option>
+              <option value="Acima de R$ 200k">Acima de R$ 200k</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="lead-form-submit"
+            aria-label="Enviar formulário"
+          >
+            🎯 Começar Minha Jornada
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <main id="root"></main>
+
+  <!-- LEAD MODAL SCRIPT -->
+  <script>
+    (function() {
+      const modal = document.getElementById('leadModal');
+      const closeBtn = document.getElementById('closeLeadModal');
+      const form = document.getElementById('leadForm');
+      const successMsg = document.getElementById('successMessage');
+
+      // Abrir modal ao carregar a página
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          modal.classList.add('active');
+        }, 500);
+      });
+
+      // Fechar modal ao clicar no botão X
+      closeBtn.addEventListener('click', function() {
+        modal.classList.remove('active');
+      });
+
+      // Fechar modal ao clicar fora (no overlay)
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+
+      // Fechar com tecla ESC
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          modal.classList.remove('active');
+        }
+      });
+
+      // Controlar envio do formulário
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('.lead-form-submit');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
+
+        // Coletar dados
+        const formData = {
+          name: document.getElementById('modalName').value,
+          email: document.getElementById('modalEmail').value,
+          phone: document.getElementById('modalPhone').value,
+          message: document.getElementById('modalObjective').value
+        };
+
+        try {
+          // Enviar para API do Google Sheets
+          const response = await fetch('https://seu-dominio.com/forms/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+          });
+
+          const result = await response.json();
+
+          if (response.ok && result.success) {
+            // Mostrar mensagem de sucesso
+            successMsg.classList.add('show');
+            form.style.opacity = '0.3';
+
+            // Resetar após 2 segundos
+            setTimeout(function() {
+              form.reset();
+              form.style.opacity = '1';
+              successMsg.classList.remove('show');
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalText;
+              modal.classList.remove('active');
+            }, 2000);
+          } else {
+            throw new Error(result.message || 'Erro ao enviar formulário');
+          }
+        } catch (error) {
+          console.error('Erro ao enviar form:', error);
+          alert('Erro ao enviar dados. Tente novamente.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      });
+    })();
+  </script>
+
+
+</body>
+
+</html>
